@@ -1,4 +1,6 @@
 var express = require('express');
+
+var bodyParser = require('body-parser');
 var app = express();
 //----templete
 var swig = require('swig');
@@ -10,6 +12,9 @@ app.set('static',__dirname + '/public');
 
 
 //---router
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
 var indexRouter = require('./routes/index');
 app.use('/',indexRouter);
 

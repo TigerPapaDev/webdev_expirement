@@ -2,9 +2,8 @@
  * Created by monodev on 16/5/12.
  */
 var mongoose = require('mongoose');
-var schema = mongoose.Schema();
 
-var userSchema = new schema({
+var userSchema = mongoose.Schema({
     name: String,
     pwd:String
 });
