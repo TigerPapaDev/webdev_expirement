@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-XYCjB+hFAjSbgf9yKUgbysEjaVLOXhCgATTEBpCqT1R3jvG5LGRAK5ZIyRbH5vpX" crossorigin="anonymous">
+    <title>{% block title %}{% endblock %} - Example</title>
+
+
+</head>
+<body>
+
+<header>
+    <h1>{% block title %}{% endblock %}</h1>
+    {% block header %}{% endblock %}
+    <nav class="nav">
+        <ul>
+            <li><a href="/">Home Page</a></li>
+            <li><a href="/people">People</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="row">
+        {% block body %}{% endblock %}
+    </div>
+
+</div>
+
+</body>
+</html>
