@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <my-comp>
+        <p>{{msg}}</p>
+    </my-comp>
+</div>
+<script src="../node_modules/vue/dist/vue.min.js"></script>
+<script>
+    var myComp = Vue.extend({template:'<div> A Custom Component</div>',
+        props:['msg']
+    }})
+    Vue.component('my-comp',myComp);
+    new Vue({
+        el:'#app'
+    })
+</script>
+</body>
+</html>
