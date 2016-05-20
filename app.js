@@ -3,18 +3,15 @@ var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
-var mongoose = require('mongoose');
 var routes = require('./routes/routes');
 var apiRoutes = require('./routes/apiRoutes');
-
 var app = express();
+
+var mongoose = require('mongoose');
 mongoose.connect("mongodb://localhost/monotest");
 
 // view engine setup
-var viewEngine = require('ejs-mate'),
-// use ejs-locals for all ejs templates:
-app.engine('ejs', engine);
+
 app.set('views',__dirname + '/views');
 app.set('view engine', 'ejs');
 
